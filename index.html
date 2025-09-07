@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Tags SEO -->
+    <title>Tafabefek Translator - Terjemahkan ke Bahasa Rahasia Unik | Aplikasi Penerjemah Online</title>
+    <meta name="description" content="Terjemahkan teks biasa menjadi bahasa rahasia Tafabefek yang menyenangkan! Aplikasi penerjemah online dengan pola unik vokal+fyang cocok untuk permainan dan komunikasi rahasia.">
+    <meta name="keywords" content="tafabefek, penerjemah bahasa, translator online, bahasa rahasia, terjemahan unik, permainan bahasa, kode rahasia, komunikasi rahasia, terjemahan lucu">
+    <meta name="author" content="Tafabefek Translator Team">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/tafabefek-translator/">
+    <meta property="og:title" content="Tafabefek Translator - Terjemahkan ke Bahasa Rahasia Unik">
+    <meta property="og:description" content="Terjemahkan teks biasa menjadi bahasa rahasia Tafabefek yang menyenangkan! Aplikasi penerjemah online dengan pola unik.">
+    <meta property="og:image" content="https://example.com/tafabefek-translator-preview.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://example.com/tafabefek-translator/">
+    <meta property="twitter:title" content="Tafabefek Translator - Terjemahkan ke Bahasa Rahasia Unik">
+    <meta property="twitter:description" content="Terjemahkan teks biasa menjadi bahasa rahasia Tafabefek yang menyenangkan! Aplikasi penerjemah online dengan pola unik.">
+    <meta property="twitter:image" content="https://example.com/tafabefek-translator-preview.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://example.com/tafabefek-translator/">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔤</text></svg>">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #6c63ff;
+            --secondary-color: #ff6584;
+            --dark-color: #2a2a72;
+            --light-color: #f8f9fa;
+            --success-color: #42b883;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            color: #333;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+        
+        .header {
+            padding: 80px 0 50px;
+            text-align: center;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%236c63ff" opacity="0.1"/></svg>');
+        }
+        
+        .translator-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+        
+        .translator-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .input-text, .output-text {
+            min-height: 150px;
+            border-radius: 12px;
+            padding: 20px;
+            font-size: 18px;
+            border: 2px solid #e6e6e6;
+            transition: border-color 0.3s;
+        }
+        
+        .input-text:focus, .output-text:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 0.25rem rgba(108, 99, 255, 0.25);
+        }
+        
+        .output-text {
+            background-color: #f8f9fa;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: #554fd8;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+        }
+        
+        .btn-success {
+            background-color: var(--success-color);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-success:hover {
+            background-color: #359f6d;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(66, 184, 131, 0.3);
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(108, 99, 255, 0.1);
+            z-index: -1;
+            animation: float 8s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+            }
+            25% {
+                transform: translateY(-20px) translateX(10px);
+            }
+            50% {
+                transform: translateY(-40px) translateX(-10px);
+            }
+            75% {
+                transform: translateY(-20px) translateX(-15px);
+            }
+        }
+        
+        .example-text {
+            background: rgba(108, 99, 255, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 80px;
+        }
+        
+        .social-icon {
+            font-size: 1.5rem;
+            color: white;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: var(--secondary-color);
+        }
+        
+        .tooltip-inner {
+            background-color: var(--success-color);
+            border-radius: 4px;
+        }
+        
+        .tooltip-arrow {
+            display: none;
+        }
+        
+        .copied-message {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--success-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 1000;
+        }
+        
+        .seo-content {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .seo-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 60px 0 30px;
+            }
+            
+            .translator-card {
+                padding: 20px;
+            }
+            
+            .input-text, .output-text {
+                min-height: 120px;
+                font-size: 16px;
+            }
+            
+            .seo-content {
+                padding: 20px 15px;
+            }
+        }
+        
+        .schema-faq {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .schema-faq h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+        
+        .faq-answer {
+            color: #555;
+        }
+    </style>
+    
+    <!-- JSON-LD Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Tafabefek Translator",
+      "url": "https://example.com/tafabefek-translator/",
+      "description": "Aplikasi penerjemah online untuk mengubah teks biasa menjadi bahasa rahasia Tafabefek dengan pola unik.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "permissions": "browser",
+      "author": {
+        "@type": "Organization",
+        "name": "Tafabefek Translator Team"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-language me-2" style="color: #6c63ff;"></i>Tafabefek Translator
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#translator">Translator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Fitur</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#examples">Contoh</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">Tafabefek Translator</h1>
+                    <p class="lead mb-4">Ubah bahasa apapun menjadi kode rahasia dengan pola unik Tafabefek! Hanya dengan satu klik, teks biasa berubah menjadi sandi menyenangkan yang hanya Anda dan teman-teman pahami.</p>
+                    <a href="#translator" class="btn btn-primary btn-lg">Coba Sekarang <i class="fas fa-arrow-down ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Translator Section -->
+    <section id="translator" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="translator-card">
+                        <h2 class="text-center mb-4"><i class="fas fa-exchange-alt me-2"></i>Penerjemah Tafabefek</h2>
+                        <div class="mb-4">
+                            <label for="inputText" class="form-label fw-bold">Masukkan teks (huruf latin):</label>
+                            <textarea class="form-control input-text" id="inputText" rows="4" placeholder="Ketik atau tempel teks di sini..."></textarea>
+                        </div>
+                        <div class="text-center mb-4">
+                            <button id="translateBtn" class="btn btn-primary"><i class="fas fa-sync-alt me-2"></i>Terjemahkan</button>
+                        </div>
+                        <div class="mb-4">
+                            <label for="outputText" class="form-label fw-bold">Hasil terjemahan Tafabefek:</label>
+                            <textarea class="form-control output-text" id="outputText" rows="4" readonly></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button id="copyBtn" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top" title="Tersalin!">
+                                <i class="fas fa-copy me-2"></i>Salin Hasil
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="text-center mb-5">Apa Itu Bahasa Tafabefek?</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <h3>Bahasa Rahasia</h3>
+                                <p>Bahasa Tafabefek adalah bahasa sandi unik yang mengubah setiap vokal menjadi suku kata dengan pola "f" + vokal yang sama. Ini membuatnya menjadi bahasa rahasia yang menyenangkan untuk komunikasi pribadi.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3>Pola Sederhana</h3>
+                                <p>Pola bahasa Tafabefek sangat sederhana: setiap vokal (a, i, u, e, o) digantikan dengan "f" + vokal itu sendiri. Misalnya, "a" menjadi "afa", "i" menjadi "ifi", dan seterusnya.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Fitur Unggulan</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Terjemahan Instan</h3>
+                        <p>Dapatkan terjemahan Tafabefek secara instan dari teks bahasa apapun yang menggunakan huruf latin.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-clipboard"></i>
+                        </div>
+                        <h3>Salin dengan Satu Klik</h3>
+                        <p>Salin hasil terjemahan dengan mudah menggunakan tombol salin untuk berbagi dengan teman.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Responsif</h3>
+                        <p>Nikmati pengalaman menerjemahkan yang optimal di semua perangkat, desktop, tablet, atau ponsel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Contoh Terjemahan</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4>Bahasa Indonesia → Tafabefek</h4>
+                    <div class="example-text">
+                        <p class="mb-1"><strong>Original:</strong> Halo, nama saya Faiz!</p>
+                        <p class="mb-0"><strong>Tafabefek:</strong> Hafalofo, nafamafa safaya Fafaifiz!</p>
+                    </div>
+                    <div class="example-text">
+                        <p class="mb-1"><strong>Original:</strong> Ayo pergi nongkrong!</p>
+                        <p class="mb-0"><strong>Tafabefek:</strong> Afayofo pefergifi nofongkrofong!</p>
+                    </div>
+                    <div class="example-text">
+                        <p class="mb-1"><strong>Original:</strong> Belajar bahasa itu menyenangkan</p>
+                        <p class="mb-0"><strong>Tafabefek:</strong> Befelajafar bahafasa ifitu fefenyefenangfan</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h4>English → Tafabefek</h4>
+                    <div class="example-text">
+                        <p class="mb-1"><strong>Original:</strong> Hello, how are you?</p>
+                        <p class="mb-0"><strong>Tafabefek:</strong> Hafellofo, hofow afare yofou?</p>
+                    </div>
+                    <div class="example-text">
+                        <p class="mb-1"><strong>Original:</strong> This translator is amazing!</p>
+                        <p class="mb-0"><strong>Tafabefek:</strong> Thifis trafanslafatofor ifis afamafazifying!</p>
+                    </div>
+                    <div class="example-text">
+                        <p class="mb-1"><strong>Original:</strong> I want to learn this language</p>
+                        <p class="mb-0"><strong>Tafabefek:</strong> Ifi wafant tofo lefearn thifis lafangafuagefe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Content Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="seo-content">
+                        <h2>Mengapa Menggunakan Penerjemah Tafabefek?</h2>
+                        <p>Penerjemah Tafabefek adalah alat yang sempurna untuk menciptakan bahasa rahasia yang menyenangkan bersama teman-teman. Dengan menggunakan pola unik yang mudah dipelajari, Anda dapat mengubah percakapan sehari-hari menjadi kode rahasia yang hanya dimengerti oleh orang-orang tertentu.</p>
+                        
+                        <h3>Manfaat Bahasa Tafabefek</h3>
+                        <p>Bahasa Tafabefek tidak hanya menyenangkan tetapi juga memiliki beberapa manfaat:</p>
+                        <ul>
+                            <li>Melatih kreativitas dalam berbahasa</li>
+                            <li>Meningkatkan kemampuan kognitif dalam mengenali pola</li>
+                            <li>Media yang efektif untuk komunikasi rahasia</li>
+                            <li>Alat pendidikan yang menyenangkan untuk anak-anak</li>
+                            <li>Menambah variasi dalam permainan bahasa</li>
+                        </ul>
+                        
+                        <h3>Cara Kerja Penerjemah Tafabefek</h3>
+                        <p>Penerjemah Tafabefek bekerja dengan menganalisis setiap huruf vokal dalam teks yang dimasukkan dan mengubahnya sesuai pola Tafabefek. Proses terjemahan terjadi secara real-time, memungkinkan Anda untuk melihat hasil terjemahan secara instan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="schema-faq">
+                        <h2 class="text-center mb-5">Pertanyaan Umum (FAQ)</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">Apa itu bahasa Tafabefek?</div>
+                            <div class="faq-answer">Bahasa Tafabefek adalah bahasa sandi unik yang dibuat dengan menambahkan "f" dan mengulang setiap huruf vokal dalam sebuah kata. Contohnya, "Halo" menjadi "Hafalofo".</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">Bagaimana cara menggunakan penerjemah Tafabefek?</div>
+                            <div class="faq-answer">Cukup masukkan teks yang ingin Anda terjemahkan ke dalam kotak input, lalu klik tombol "Terjemahkan". Hasil terjemahan akan muncul di kotak output secara instan.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">Apakah penerjemah ini bisa digunakan untuk semua bahasa?</div>
+                            <div class="faq-answer">Ya, penerjemah Tafabefek dapat digunakan untuk semua bahasa yang menggunakan huruf latin, termasuk Bahasa Indonesia, Inggris, Spanyol, Perancis, dan banyak lainnya.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">Apakah ada batasan panjang teks yang bisa diterjemahkan?</div>
+                            <div class="faq-answer">Tidak ada batasan ketat, tetapi untuk kinerja optimal, kami merekomendasikan untuk menerjemahkan teks kurang dari 10.000 karakter sekaligus.</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">Apakah aplikasi ini benar-benar gratis?</div>
+                            <div class="faq-answer">Ya, penerjemah Tafabefek sepenuhnya gratis tanpa biaya tersembunyi atau kebutuhan untuk mendaftar.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h3>Tafabefek Translator</h3>
+                    <p>Alat penerjemah bahasa rahasia terbaik untuk komunikasi menyenangkan dengan teman dan keluarga.</p>
+                </div>
+                <div class="col-lg-6 mb-4 text-lg-end">
+                    <h3>Ikuti Kami</h3>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Tafabefek Translator. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copied Message -->
+    <div class="copied-message" id="copiedMessage">
+        <i class="fas fa-check-circle me-2"></i>Teks berhasil disalin!
+    </div>
+
+    <!-- Floating Bubbles -->
+    <div id="bubbles"></div>
+
+    <!-- Bootstrap & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <script>
+        // Inisialisasi tooltip
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+
+        // Fungsi untuk membuat gelembung
+        function createBubbles() {
+            const bubblesContainer = document.getElementById('bubbles');
+            const bubblesCount = 15;
+            
+            for (let i = 0; i < bubblesCount; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                
+                // Ukuran acak
+                const size = Math.random() * 60 + 20;
+                bubble.style.width = `${size}px`;
+                bubble.style.height = `${size}px`;
+                
+                // Posisi acak
+                bubble.style.left = `${Math.random() * 100}vw`;
+                bubble.style.top = `${Math.random() * 100}vh`;
+                
+                // Warna acak dengan opacity rendah
+                const colors = [
+                    'rgba(108, 99, 255, 0.1)',
+                    'rgba(255, 101, 132, 0.1)',
+                    'rgba(66, 184, 131, 0.1)',
+                    'rgba(255, 177, 66, 0.1)'
+                ];
+                bubble.style.background = colors[Math.floor(Math.random() * colors.length)];
+                
+                // Animasi dengan delay acak
+                bubble.style.animationDelay = `${Math.random() * 5}s`;
+                bubble.style.animationDuration = `${Math.random() * 10 + 10}s`;
+                
+                bubblesContainer.appendChild(bubble);
+            }
+        }
+        
+        // Fungsi penerjemah Tafabefek
+        function translateToTafabefek(text) {
+            // Pola penerjemahan: setiap vokal diganti dengan vokal + 'f' + vokal
+            const vowelMap = {
+                'a': 'afa', 'i': 'ifi', 'u': 'ufu', 'e': 'efe', 'o': 'ofo',
+                'A': 'Afa', 'I': 'Ifi', 'U': 'Ufu', 'E': 'Efe', 'O': 'Ofo'
+            };
+            
+            let result = '';
+            for (let i = 0; i < text.length; i++) {
+                const char = text[i];
+                if (vowelMap[char]) {
+                    result += vowelMap[char];
+                } else {
+                    result += char;
+                }
+            }
+            
+            return result;
+        }
+        
+        // Event listener untuk tombol terjemahkan
+        document.getElementById('translateBtn').addEventListener('click', function() {
+            const inputText = document.getElementById('inputText').value;
+            const outputText = translateToTafabefek(inputText);
+            document.getElementById('outputText').value = outputText;
+        });
+        
+        // Event listener untuk tombol salin
+        document.getElementById('copyBtn').addEventListener('click', function() {
+            const outputText = document.getElementById('outputText');
+            outputText.select();
+            outputText.setSelectionRange(0, 99999);
+            document.execCommand('copy');
+            
+            // Tampilkan pesan berhasil
+            const copiedMessage = document.getElementById('copiedMessage');
+            copiedMessage.style.display = 'block';
+            
+            // Sembunyikan pesan setelah 3 detik
+            setTimeout(function() {
+                copiedMessage.style.display = 'none';
+            }, 3000);
+        });
+        
+        // Inisialisasi ScrollReveal
+        ScrollReveal().reveal('.translator-card', {
+            delay: 300,
+            distance: '50px',
+            origin: 'bottom',
+            duration: 1000
+        });
+        
+        ScrollReveal().reveal('.feature-card', {
+            delay: 300,
+            distance: '50px',
+            origin: 'bottom',
+            duration: 1000,
+            interval: 200
+        });
+        
+        // Jalankan fungsi saat halaman dimuat
+        window.onload = function() {
+            createBubbles();
+            
+            // Terjemahkan teks default
+            const defaultText = document.getElementById('inputText').value;
+            document.getElementById('outputText').value = translateToTafabefek(defaultText);
+        };
+    </script>
+</body>
+</html>
