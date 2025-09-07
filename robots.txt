@@ -1,0 +1,8 @@
+User-agent: *
+
+Allow: /index.html
+
+Disallow: /private/
+Disallow: /admin/
+
+Sitemap: https://zayuvalya.github.io/TAFABEFEK/sitemap.xml
